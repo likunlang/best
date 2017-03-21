@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+   <!--- 页面基本设置
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>百创活动案例</title>
+	<meta name="description" content="活动页面">  
+	<meta name="keywords" content="百创活动案例">  
+	<meta name="author" content="lide">
+
+   <!-- 移动端页面设置
+   ================================================== -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+ 	<!-- CSS外链
+   ================================================== -->
+   <link rel="stylesheet" href="./css/reset.css"> 
+   <link rel="stylesheet" href="./css/main.css">
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+<!--header开始-->
+	<header>
+		<div class="banner">
+			<img src="images/img1.png" alt="banner图片">
+			<div class="content">
+				<h1>局部改装，17年品质，值得信赖</h1>
+				<h2>厨房 卫生间 卧室 餐厅</h2>
+			</div>
+		</div>
+	</header>
+<!--/header结束-->
+
+
+<!--nav开始-->
+	<nav>
+		<div class="nav">
+			<ul class="clearfix">
+				<li>
+					<div class="cir"><p>家装</p><p>咨询</p></div>
+				</li>
+				<li>
+					<div class="cir"><p>现场</p><p>勘查</p></div>
+				</li>
+				<li>
+					<div class="cir"><p>改造</p><p>方案</p></div>
+				</li>
+				<li>
+					<div class="cir"><p>报价</p><p>预算</p></div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+<!--/nav结束-->
+
+<!--预约开始-->
+	<section>
+		<div class="order">
+			<ul>
+				<form action="#" method="post">
+					<li class="form-name"> 
+						<input id="name" name="title" placeholder="您的称呼" type="text">
+					</li>
+					<li class="form-phone"> 
+						<input id="tel" name="mycall" placeholder="您的手机" type="tel">
+					</li>
+					<li class="form-area"> 
+						<select name="" id="area">
+							<option value="choose" disabled selected style='display:none;'>装修部位</option>
+							<option value="presence">客厅</option>
+							<option value="mainroom">主卧</option>
+							<option value="wc">卫生间</option>
+							<option value="cookroom">厨房</option>
+							<option value="else">其他</option>
+						</select>
+					</li>
+					<li class="form-city">  
+						<select name="" id="city">
+							<option value="choose" value="choose" disabled selected style='display:none;'>请选择房屋所在城市</option>
+							<option value="sz">深圳</option>
+							<option value="dg">东莞</option>
+							<option value="hz">惠州</option>
+							<option value="gz">广州</option>
+							<option value="else">其他</option>
+						</select>
+					</li>
+					<li class="form-submit"> 
+						<input value="免费预约" class="reserve" type="submit">
+					</li>
+				</form>
+		    </ul>
+		</div>
+	</section>
+<!--预约结束-->
+
+<!--特殊及优惠开始-->
+	<section>
+		<div class="feature clearfix">
+			<ul>
+				<li class="feature-detail">
+					<i>省心</i>
+					<div class="feature-content">
+						<span>无需搬家，不影响安装，安全可靠</span>
+					</div>
+				</li>
+				<li class="feature-detail">
+					<i>省钱</i>
+					<div class="feature-content">
+						<span>包主材、包辅料、包施工、包售后，一包到底</span>
+					</div>
+				</li>
+				<li class="feature-detail">
+					<i>省时</i>
+					<div class="feature-content">
+						<span>13天标准作业，还你一个新家</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="menu clearfix">
+			<i class="line"></i>
+			<span class="text">局装套餐精选</span>
+			<ul>
+				<li>
+					<span>卫生间换新套装，优惠价17800元</span>
+					<a href="#">查看详情</a>
+				</li>
+				<li>
+					<span>卫生间换新套装，优惠价17800元</span>
+					<a href="#">查看详情</a>
+				</li>
+				<li>
+					<span>更多优惠，可预约咨询</span>
+					<a href="#">我要预约</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!--/特殊及优惠结束-->
+
+<!--底部开始-->
+	<footer>
+		<div class="logo">
+			<img src="./images/img2.png" alt="">
+		</div>
+		<div class="contact">
+			<ul>
+				<li><a href="tel:400-888-6266">拨号</a></li>
+				<li><a href="tel:400-888-6266">咨询</a></li>
+				<li><a href="tel:400-888-6266">预约</a></li>
+			</ul>
+		</div>
+	</footer>
+<!--/底部结束-->
+
+   <script src="./js/jquery-2.1.3.min.js"></script>
+   <script>
+   $('.reserve').click(function() {
+   		console.log('点击提交按钮')
+		var user_name=$('#name').val();
+		var user_tel=$('#tel').val();
+		var user_area=$('#area').val();
+		var user_city=$('#city').val();
+		if(user_name){
+			if(/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/.test(user_tel)){
+				if(user_area){
+					if (user_city) {
+						alert('恭喜您预约成功');
+						return true;
+					}
+					else{
+						alert('请选房屋所在城市');
+						return false;
+					}
+				}
+				else{
+					alert('请选择装修部位');
+					return false;
+				}
+			}else{
+				alert('请输入正确手机号码');
+				return false;
+			}
+		}else{
+			alert('请输入名字');
+			return false;
+		}
+
+
+	})
+   </script>
+</body>
+</html>
