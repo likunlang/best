@@ -116,7 +116,7 @@ img{
     background:#ff7f00;
     color:#fff;
 }
-.form-area:after,
+/*.form-area:after,
 .form-city:after{
     content: '';
     position: absolute;
@@ -127,7 +127,7 @@ img{
     right: 8%;
     border: 5px solid transparent;
     border-left: 5px solid #aaa;
-}
+}*/
 .feature{
     padding: 1rem 0;
     background-color: #f2f2f2;
